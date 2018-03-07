@@ -3,9 +3,9 @@
     self.clientes = ko.observableArray();
     self.error = ko.observable();
 
-    var ClientesURI = '/api/clientes/';
+    var clientesURI = '/api/clientes/';
 
-    function ajaxHelper(data, method, data) {
+    function ajaxHelper(uri, method, data) {
         self.error('Erro na solicitação de serviço...'); // Clear error message
         return $.ajax({
             type: method,
@@ -19,7 +19,7 @@
     }
 
     function getAllClientes() {
-        ajaxHelper(clientesUri, 'GET').done(function (data) {
+        ajaxHelper(clientesURI, 'GET').done(function (data) {
             self.clientes(data);
         });
     }
