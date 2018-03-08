@@ -49,9 +49,9 @@
                     <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Registre-se como um novo usuário</asp:HyperLink>
                 </p>
                 <p>
-                    <%-- Ative quando tiver a confirmação de conta ativada para a funcionalidade de redefinição de senha
+                    <%-- Ative quando tiver a confirmação de conta ativada para a funcionalidade de redefinição de senha --%>
                     <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Esqueceu a senha?</asp:HyperLink>
-                    --%>
+                    
                 </p>
             </section>
         </div>

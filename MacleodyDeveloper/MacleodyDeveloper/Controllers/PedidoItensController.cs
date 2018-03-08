@@ -18,6 +18,12 @@ namespace ChrisDeveloperAPI.Controllers {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/PedidoItens
+        /// <summary>
+        /// Documentação do método GET
+        /// </summary>
+        /// <returns> Retorna uma lista de itens adicionados num pedido, 
+        /// além da quantidade de cada item, seu preço unitário, somatória
+        /// de todos os valores e data das compras</returns>
         public IQueryable<PedidoItensDTO> GetPedidoItens() {
             var pedidoItens =
                 from p in db.PedidoItens
@@ -34,6 +40,11 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // GET: api/PedidoItens/5
+        /// <summary>
+        /// Documentação do método GET com parâmetro
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será recuperado </param>
+        /// <returns> Exibe um conjunto de itens adicionados num pedido o registro especificado </returns>
         [ResponseType(typeof(PedidoItensDetailDTO))]
         public async Task<IHttpActionResult> GetPedidoItens(int id) {
             var pedidoItens =
@@ -56,6 +67,12 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // PUT: api/PedidoItens/5
+        /// <summary>
+        /// Documentação do método PUT
+        /// </summary>
+        /// <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+        /// <param name="pedidoItens"> Objeto contendo todo o conteúdo atualizado do registro </param>
+        /// <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutPedidoItens(int id, PedidoItens pedidoItens)
         {
@@ -91,6 +108,11 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // POST: api/PedidoItens
+        /// <summary>
+        /// Documentação do método POST
+        /// </summary>
+        /// <param name="pedidoItens"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+        /// <returns> Confirma se a criação do registro foi realizada ou não. </returns>
         [ResponseType(typeof(PedidoItens))]
         public async Task<IHttpActionResult> PostPedidoItens(PedidoItens pedidoItens)
         {
@@ -117,6 +139,11 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // DELETE: api/PedidoItens/5
+        /// <summary>
+        /// Documentação do método DELETE
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será deletado </param>
+        /// <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
         [ResponseType(typeof(PedidoItens))]
         public async Task<IHttpActionResult> DeletePedidoItens(int id)
         {

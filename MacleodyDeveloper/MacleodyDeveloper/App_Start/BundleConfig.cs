@@ -34,6 +34,10 @@ namespace MacleodyDeveloper
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
 
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/site.css"));
+
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
                 new ScriptResourceDefinition
@@ -41,6 +45,11 @@ namespace MacleodyDeveloper
                     Path = "~/Scripts/respond.min.js",
                     DebugPath = "~/Scripts/respond.js",
                 });
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+              //"~/Scripts/knockout-{version}.js",
+              "~/Scripts/angular.min.js",
+              "~/Scripts/app.js"));
         }
     }
 }

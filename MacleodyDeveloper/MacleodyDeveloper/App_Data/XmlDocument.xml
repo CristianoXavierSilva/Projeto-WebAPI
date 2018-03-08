@@ -100,7 +100,7 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Login.FailureText">
@@ -109,7 +109,7 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Login.Email">
@@ -118,7 +118,7 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Login.Password">
@@ -127,7 +127,7 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Login.RememberMe">
@@ -136,7 +136,7 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Login.RegisterHyperLink">
@@ -145,7 +145,16 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+            </remarks>
+        </member>
+        <member name="F:MacleodyDeveloper.Account.Login.ForgotPasswordHyperLink">
+            <summary>
+            Controle ForgotPasswordHyperLink.
+            </summary>
+            <remarks>
+            Campo gerado automaticamente.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Login.OpenAuthLogin">
@@ -154,7 +163,7 @@
             </summary>
             <remarks>
             Campo gerado automaticamente.
-            Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+            Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
             </remarks>
         </member>
         <member name="F:MacleodyDeveloper.Account.Manage.successMessage">
@@ -1029,6 +1038,274 @@
             Auto-generated field.
             To modify move field declaration from designer file to code-behind file.
             </remarks>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhoItensController.GetCarrinhoItens">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de itens adicionados num carrinho, 
+            além da quantidade de cada item, seu preço unitário, somatória
+            de todos os valores e data das compras</returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhoItensController.GetCarrinhoItens(System.Int32)">
+            <summary>
+            Documentação do método GET com parâmetro
+            </summary>
+            <param name="id"> Identifica o registro que será recuperado </param>
+            <returns> Exibe um conjunto de itens adicionados num carrinho o registro especificado </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhoItensController.PutCarrinhoItens(System.Int32,MacleodyDeveloper.Models.CarrinhoItens)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="carrinhoItens"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhoItensController.PostCarrinhoItens(MacleodyDeveloper.Models.CarrinhoItens)">
+            <summary>
+            Documentação do método POST
+            </summary>
+            <param name="carrinhoItens"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+            <returns> Confirma se a criação do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhoItensController.DeleteCarrinhoItens(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhosController.GetCarrinhos">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de carrinhos de compras, 
+            além de recuperar o registro de cada cliente vinculado a um determinado carrinho, 
+            o valor total das compras e data da realização dessas compras </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhosController.GetCarrinho(System.Int32)">
+            <summary>
+            Documentação do método GET com parâmetro
+            </summary>
+            <param name="id"> Identifica o registro que será recuperado </param>
+            <returns> Exibe um carrinho de compras correspondente a identificação passada no parâmetro </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhosController.PutCarrinho(System.Int32,MacleodyDeveloper.Models.Carrinho)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="carrinho"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhosController.PostCarrinho(MacleodyDeveloper.Models.Carrinho)">
+            <summary>
+            Documentação do método POST
+            </summary>
+            <param name="carrinho"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+            <returns> Confirma se a criação do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CarrinhosController.DeleteCarrinho(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CategoriasController.GetCategorias">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de categorias com suas informações, tais como:
+            O nome de cada categoria, seus status, isto é, se está ativa ou não e sua
+            data de criação </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CategoriasController.GetCategoria(System.Int32)">
+            <summary>
+            Documentação do método GET com parâmetro
+            </summary>
+            <param name="id"> Identifica o registro que será recuperado </param>
+            <returns> Exibe a categoria correspondente a identificação passada no parâmetro </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.CategoriasController.PutCategoria(System.Int32,MacleodyDeveloper.Models.Categoria)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="categoria"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ChrisDeveloperAPI.Controllers.CategoriasController.PostCategoria(MacleodyDeveloper.Models.Categoria)" -->
+        <member name="M:ChrisDeveloperAPI.Controllers.CategoriasController.DeleteCategoria(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ClientesController.GetClientes">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de cliente com seus dados de contato</returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ClientesController.GetCliente(System.Int32)">
+            <summary>
+            Documentação do método GET com parâmetro
+            </summary>
+            <param name="id"> Identifica o registro que será recuperado </param>
+            <returns> Retorna um determinado cliente com seus dados de contato, de acordo
+            com sua identificação especificada como parâmetro</returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ClientesController.PutCliente(System.Int32,MacleodyDeveloper.Models.Cliente)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="cliente"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ChrisDeveloperAPI.Controllers.ClientesController.PostCliente(MacleodyDeveloper.Models.Cliente)" -->
+        <member name="M:ChrisDeveloperAPI.Controllers.ClientesController.DeleteCliente(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidoItensController.GetPedidoItens">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de itens adicionados num pedido, 
+            além da quantidade de cada item, seu preço unitário, somatória
+            de todos os valores e data das compras</returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidoItensController.GetPedidoItens(System.Int32)">
+            <summary>
+            Documentação do método GET com parâmetro
+            </summary>
+            <param name="id"> Identifica o registro que será recuperado </param>
+            <returns> Exibe um conjunto de itens adicionados num pedido o registro especificado </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidoItensController.PutPedidoItens(System.Int32,MacleodyDeveloper.Models.PedidoItens)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="pedidoItens"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidoItensController.PostPedidoItens(MacleodyDeveloper.Models.PedidoItens)">
+            <summary>
+            Documentação do método POST
+            </summary>
+            <param name="pedidoItens"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+            <returns> Confirma se a criação do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidoItensController.DeletePedidoItens(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidosController.GetPedidos">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de pedidos de compras, 
+            além de recuperar o registro de cada carrinho vinculado a um determinado pedido, 
+            o valor total das compras e data da realização dessas compras </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ChrisDeveloperAPI.Controllers.PedidosController.GetPedido(System.Int32)" -->
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidosController.PutPedido(System.Int32,MacleodyDeveloper.Models.Pedido)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="pedido"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidosController.PostPedido(MacleodyDeveloper.Models.Pedido)">
+            <summary>
+            Documentação do método POST
+            </summary>
+            <param name="pedido"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+            <returns> Confirma se a criação do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.PedidosController.DeletePedido(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutoCategoriasController.GetProdutoCategorias">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de categorias de produtos com suas datas de criação </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ChrisDeveloperAPI.Controllers.ProdutoCategoriasController.GetProdutoCategoria(System.Int32)" -->
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutoCategoriasController.PutProdutoCategoria(System.Int32,MacleodyDeveloper.Models.ProdutoCategoria)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="produtoCategoria"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutoCategoriasController.PostProdutoCategoria(MacleodyDeveloper.Models.ProdutoCategoria)">
+            <summary>
+            Documentação do método POST
+            </summary>
+            <param name="produtoCategoria"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+            <returns> Confirma se a criação do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutoCategoriasController.DeleteProdutoCategoria(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutosController.GetProdutos">
+            <summary>
+            Documentação do método GET
+            </summary>
+            <returns> Retorna uma lista de produtos com suas informações,
+            tais como: nome, seus status, preço normal, desconto e preço promocional</returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutosController.GetProduto(System.Int32)">
+            <summary>
+            Documentação do método GET com parâmetro
+            </summary>
+            <param name="id"> Identifica o registro que será recuperado </param>
+            <returns> Exibe um produto de acordo com o registro especificado </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutosController.PutProduto(System.Int32,MacleodyDeveloper.Models.Produto)">
+            <summary>
+            Documentação do método PUT
+            </summary>
+            <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+            <param name="produto"> Objeto contendo todo o conteúdo atualizado do registro </param>
+            <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutosController.PostProduto(MacleodyDeveloper.Models.Produto)">
+            <summary>
+            Documentação do método POST
+            </summary>
+            <param name="produto"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+            <returns> Confirma se a criação do registro foi realizada ou não. </returns>
+        </member>
+        <member name="M:ChrisDeveloperAPI.Controllers.ProdutosController.DeleteProduto(System.Int32)">
+            <summary>
+            Documentação do método DELETE
+            </summary>
+            <param name="id"> Identifica o registro que será deletado </param>
+            <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
         </member>
     </members>
 </doc>

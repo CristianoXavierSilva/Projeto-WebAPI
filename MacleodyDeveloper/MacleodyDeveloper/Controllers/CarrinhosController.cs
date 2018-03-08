@@ -18,6 +18,12 @@ namespace ChrisDeveloperAPI.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Carrinhos
+        /// <summary>
+        /// Documentação do método GET
+        /// </summary>
+        /// <returns> Retorna uma lista de carrinhos de compras, 
+        /// além de recuperar o registro de cada cliente vinculado a um determinado carrinho, 
+        /// o valor total das compras e data da realização dessas compras </returns>
         public IQueryable<CarrinhoDTO> GetCarrinhos() {
 
             var carrinhos =
@@ -32,6 +38,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // GET: api/Carrinhos/5
+        /// <summary>
+        /// Documentação do método GET com parâmetro
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será recuperado </param>
+        /// <returns> Exibe um carrinho de compras correspondente a identificação passada no parâmetro </returns>
         [ResponseType(typeof(CarrinhoDetailDTO))]
         public async Task<IHttpActionResult> GetCarrinho(int id) {
             var carrinho =
@@ -52,6 +63,12 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // PUT: api/Carrinhos/5
+        /// <summary>
+        /// Documentação do método PUT
+        /// </summary>
+        /// <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+        /// <param name="carrinho"> Objeto contendo todo o conteúdo atualizado do registro </param>
+        /// <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutCarrinho(int id, Carrinho carrinho)
         {
@@ -87,6 +104,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // POST: api/Carrinhos
+        /// <summary>
+        /// Documentação do método POST
+        /// </summary>
+        /// <param name="carrinho"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+        /// <returns> Confirma se a criação do registro foi realizada ou não. </returns>
         [ResponseType(typeof(Carrinho))]
         public async Task<IHttpActionResult> PostCarrinho(Carrinho carrinho)
         {
@@ -109,6 +131,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // DELETE: api/Carrinhos/5
+        /// <summary>
+        /// Documentação do método DELETE
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será deletado </param>
+        /// <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
         [ResponseType(typeof(Carrinho))]
         public async Task<IHttpActionResult> DeleteCarrinho(int id)
         {

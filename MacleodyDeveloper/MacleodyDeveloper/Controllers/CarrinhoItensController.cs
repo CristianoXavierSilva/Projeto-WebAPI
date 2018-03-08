@@ -18,6 +18,12 @@ namespace ChrisDeveloperAPI.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/CarrinhoItens
+        /// <summary>
+        /// Documentação do método GET
+        /// </summary>
+        /// <returns> Retorna uma lista de itens adicionados num carrinho, 
+        /// além da quantidade de cada item, seu preço unitário, somatória
+        /// de todos os valores e data das compras</returns>
         public IQueryable<CarrinhoItensDTO> GetCarrinhoItens() {
             var carrinhoItens =
                 from ci in db.CarrinhoItens
@@ -34,6 +40,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // GET: api/CarrinhoItens/5
+        /// <summary>
+        /// Documentação do método GET com parâmetro
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será recuperado </param>
+        /// <returns> Exibe um conjunto de itens adicionados num carrinho o registro especificado </returns>
         [ResponseType(typeof(CarrinhoItensDetailDTO))]
         public async Task<IHttpActionResult> GetCarrinhoItens(int id) {
             var carrinhoItens =
@@ -57,6 +68,12 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // PUT: api/CarrinhoItens/5
+        /// <summary>
+        /// Documentação do método PUT
+        /// </summary>
+        /// <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+        /// <param name="carrinhoItens"> Objeto contendo todo o conteúdo atualizado do registro </param>
+        /// <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutCarrinhoItens(int id, CarrinhoItens carrinhoItens)
         {
@@ -92,6 +109,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // POST: api/CarrinhoItens
+        /// <summary>
+        /// Documentação do método POST
+        /// </summary>
+        /// <param name="carrinhoItens"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+        /// <returns> Confirma se a criação do registro foi realizada ou não. </returns>
         [ResponseType(typeof(CarrinhoItens))]
         public async Task<IHttpActionResult> PostCarrinhoItens(CarrinhoItens carrinhoItens)
         {
@@ -117,6 +139,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // DELETE: api/CarrinhoItens/5
+        /// <summary>
+        /// Documentação do método DELETE
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será deletado </param>
+        /// <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
         [ResponseType(typeof(CarrinhoItens))]
         public async Task<IHttpActionResult> DeleteCarrinhoItens(int id)
         {

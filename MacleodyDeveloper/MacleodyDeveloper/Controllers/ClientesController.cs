@@ -17,6 +17,10 @@ namespace ChrisDeveloperAPI.Controllers {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Clientes
+        /// <summary>
+        /// Documentação do método GET
+        /// </summary>
+        /// <returns> Retorna uma lista de cliente com seus dados de contato</returns>
         public IQueryable<ClienteDTO> GetClientes() {
             var clientes = 
                 from c in db.Clientes
@@ -30,6 +34,12 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // GET: api/Clientes/5
+        /// <summary>
+        /// Documentação do método GET com parâmetro
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será recuperado </param>
+        /// <returns> Retorna um determinado cliente com seus dados de contato, de acordo
+        /// com sua identificação especificada como parâmetro</returns>
         [ResponseType(typeof(ClienteDetailDTO))]
         public async Task<IHttpActionResult> GetCliente(int id) {
             var cliente =
@@ -50,6 +60,12 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // PUT: api/Clientes/5
+        /// <summary>
+        /// Documentação do método PUT
+        /// </summary>
+        /// <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+        /// <param name="cliente"> Objeto contendo todo o conteúdo atualizado do registro </param>
+        /// <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutCliente(int id, Cliente cliente)
         {
@@ -85,6 +101,11 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // POST: api/Clientes
+        /// <summary>
+        /// Documentação do método POST
+        /// </summary>
+        /// <param name="cliente"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+        /// <returns> Confirma se a criação do registro foi realizada ou não. </returns
         [ResponseType(typeof(Cliente))]
         public async Task<IHttpActionResult> PostCliente(Cliente cliente)
         {
@@ -107,6 +128,11 @@ namespace ChrisDeveloperAPI.Controllers {
         }
 
         // DELETE: api/Clientes/5
+        /// <summary>
+        /// Documentação do método DELETE
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será deletado </param>
+        /// <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
         [ResponseType(typeof(Cliente))]
         public async Task<IHttpActionResult> DeleteCliente(int id)
         {

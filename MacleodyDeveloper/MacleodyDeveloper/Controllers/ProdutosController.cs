@@ -18,6 +18,11 @@ namespace ChrisDeveloperAPI.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Produtos
+        /// <summary>
+        /// Documentação do método GET
+        /// </summary>
+        /// <returns> Retorna uma lista de produtos com suas informações,
+        /// tais como: nome, seus status, preço normal, desconto e preço promocional</returns>
         public IQueryable<ProdutoDTO> GetProdutos() {
             var produtos =
                 from p in db.Produtos
@@ -33,6 +38,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // GET: api/Produtos/5
+        /// <summary>
+        /// Documentação do método GET com parâmetro
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será recuperado </param>
+        /// <returns> Exibe um produto de acordo com o registro especificado </returns>
         [ResponseType(typeof(ProdutoDetailDTO))]
         public async Task<IHttpActionResult> GetProduto(int id) {
             var produto =
@@ -54,6 +64,12 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // PUT: api/Produtos/5
+        /// <summary>
+        /// Documentação do método PUT
+        /// </summary>
+        /// <param name="id"> Identificador, especificado pelo usuário, do registro que será atualizado </param>
+        /// <param name="produto"> Objeto contendo todo o conteúdo atualizado do registro </param>
+        /// <returns> Confirma se a atualização do registro foi realizada ou não. </returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutProduto(int id, Produto produto)
         {
@@ -89,6 +105,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // POST: api/Produtos
+        /// <summary>
+        /// Documentação do método POST
+        /// </summary>
+        /// <param name="produto"> Trás o objeto contendo todos os dados do registro para este ser inserido na base de dados </param>
+        /// <returns> Confirma se a criação do registro foi realizada ou não. </returns>
         [ResponseType(typeof(Produto))]
         public async Task<IHttpActionResult> PostProduto(Produto produto)
         {
@@ -113,6 +134,11 @@ namespace ChrisDeveloperAPI.Controllers
         }
 
         // DELETE: api/Produtos/5
+        /// <summary>
+        /// Documentação do método DELETE
+        /// </summary>
+        /// <param name="id"> Identifica o registro que será deletado </param>
+        /// <returns> Confirma se a remoção do registro da base de dados foi realizada ou não. </returns>
         [ResponseType(typeof(Produto))]
         public async Task<IHttpActionResult> DeleteProduto(int id)
         {
