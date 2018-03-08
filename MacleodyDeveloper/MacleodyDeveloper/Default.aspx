@@ -10,20 +10,13 @@
 
     <div class="row">
         <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Clientes</h2>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-unstyled" data-bind="foreach: clientes">
-                        <li>
-                        <span data-bind="text: cliente_id"></span> : <strong><span data-bind="text: nome"></span></strong>
-                        <small class="navbar-right"><a runat="server" href="~/Detail" data-bind="click: $parent.getClientesDetail">Detalhes</a></small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
+                a broad range of clients, including browsers and mobile devices. ASP.NET Web API
+                is an ideal platform for building RESTful applications on the .NET Framework.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
         </div>
         <div class="col-md-4">
             <h2>Get more libraries</h2>
@@ -45,6 +38,6 @@
         </div>
     </div>
 
-    <script src="Scripts/knockout-3.4.2.js"></script>
-    <script src="Scripts/app.js"></script>
+    <!--<script src="Scripts/knockout-3.4.2.js"></script>
+    <script src="Scripts/app.js"></script>-->
 </asp:Content>
