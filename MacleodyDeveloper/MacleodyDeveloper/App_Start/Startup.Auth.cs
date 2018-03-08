@@ -47,18 +47,19 @@ namespace MacleodyDeveloper
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // Remover comentário das linhas a seguir para ativar o logon com provedores de logon terceirizados
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: "13958213-e0d0-400d-b70a-0c4533aed752",
+                clientSecret: "mfzcA@zefWSYACN58382}[~");
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "360523434355908",
+               appSecret: "ed513bebfae9afcfc03e3f68ec5296fa");
 
+            app.UseGoogleAuthentication();
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
             //    ClientId = "",

@@ -9,6 +9,9 @@ namespace MacleodyDeveloper
     {
         public static void Register(HttpConfiguration config)
         {
+            //Habilitando acesso API somente para usuários autenticados
+            config.Filters.Add(new AuthorizeAttribute());
+
             // Serviços e configuração da API da Web
 
             // Rotas da API da Web
